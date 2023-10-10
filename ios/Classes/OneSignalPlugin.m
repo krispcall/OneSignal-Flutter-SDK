@@ -387,6 +387,7 @@
 }
 
 - (void)completeNotification:(FlutterMethodCall *)call withResult:(FlutterResult)result {
+    NSLog(call);
     NSString *notificationId = call.arguments[@"notificationId"];
     BOOL shouldDisplay = [call.arguments[@"shouldDisplay"] boolValue];
     OSNotificationDisplayResponse completion = self.notificationCompletionCache[notificationId];
